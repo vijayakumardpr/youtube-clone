@@ -1,12 +1,12 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { toggle } from '../utils/navSlice'
 
 
 const Header = () => {
 
     const dispatch = useDispatch()
-    const isTrue = useSelector(store => store.nav.isTrue)
+
 
     function handleNav() {
         dispatch(toggle())
