@@ -1,11 +1,24 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggle } from '../utils/navSlice'
+
 
 const Header = () => {
+
+    const dispatch = useDispatch()
+    const isTrue = useSelector(store => store.nav.isTrue)
+
+    function handleNav() {
+        dispatch(toggle())
+    }
+
+
+
     return (
         <div className='flex items-center justify-between px-5'>
             <div className='flex items-center'>
-                <img className="w-7" alt="menu" src="https://cdn-icons-png.flaticon.com/512/3917/3917215.png" />
-                <img className="w-36 ml-3" alt="logo" src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500" />
+                <img onClick={() => handleNav()} className="w-7 cursor-pointer" alt="menu" src="https://cdn-icons-png.flaticon.com/512/3917/3917215.png" />
+                <img className="w-36 ml-3 cursor-pointer" alt="logo" src="https://lh3.googleusercontent.com/3zkP2SYe7yYoKKe47bsNe44yTgb4Ukh__rBbwXwgkjNRe4PykGG409ozBxzxkrubV7zHKjfxq6y9ShogWtMBMPyB3jiNps91LoNH8A=s500" />
             </div>
             <div className='w-1/2'>
                 <input className="border border-gray-500 w-2/4 py-2 px-4 outline-none rounded-l-full" type="search" placeholder="Search" />
