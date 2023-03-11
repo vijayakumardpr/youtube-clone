@@ -16,10 +16,8 @@ const VideoContainer = () => {
     }, [])
 
 
-
-
     async function getVideos() {
-        const videoStreaming = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyD0rQ9lSfoMNAIZDhCgx7nSr3GcaLZqAPE")
+        const videoStreaming = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key=AIzaSyCgVXnKeqyJW0vor4n01N1dhFXgR0v3ecw")
         const data = await videoStreaming.json()
         setVideos(data.items)
     }
