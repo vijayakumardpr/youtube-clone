@@ -19,13 +19,15 @@ const list = ["All",
 ]
 const ButtonContainer = () => {
     return (
-        <div className='flex'>
+        <div className='flex sticky top-16 z-10 bg-white'>
+
             {
                 list.map((item, i) => {
                     return <Buttons key={i} item={item} />
                 })
             }
         </div>
+
     )
 }
 

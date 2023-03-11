@@ -9,11 +9,15 @@ const navSlice = createSlice({
     reducers: {
         toggle: (state) => {
             state.isTrue = !state.isTrue
+        },
+
+        navHide: (state) => {
+            state.isTrue = false
         }
     }
 
 })
 
-export const { toggle } = navSlice.actions
+export const { toggle, navHide } = navSlice.actions
 
 export default navSlice.reducer
