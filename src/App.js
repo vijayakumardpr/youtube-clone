@@ -12,7 +12,7 @@ const appRouter = createBrowserRouter([
     element: <Body />,
     children: [
       {
-        path: "/youtube-clone",
+        path: "/youtube-clone/",
         element: <MainContainer />
       },
       {
