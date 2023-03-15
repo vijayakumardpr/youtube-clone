@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { toggle } from '../utils/navSlice'
-import { searchVideos } from '../utils/searchSlice'
 
 
 const Header = () => {
@@ -14,9 +13,9 @@ const Header = () => {
         dispatch(toggle())
     }
 
-    function getValue() {
-        dispatch(searchVideos(searchTxt))
-    }
+    // function getValue() {
+    //     dispatch(searchVideos(searchTxt))
+    // }
 
 
 
@@ -38,7 +37,7 @@ const Header = () => {
                 />
                 <button
                     className="border border-gray-500 py-2 px-4 rounded-r-full bg-gray-100"
-                    onClick={() => getValue()}
+
                 >Search</button>
             </div>
             <div>
