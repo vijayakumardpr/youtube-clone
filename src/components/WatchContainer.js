@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { navHide } from '../utils/navSlice'
+import CommentsContainer from './CommentsContainer'
 
 const WatchContainer = () => {
     const [searchParams] = useSearchParams()
@@ -22,6 +23,10 @@ const WatchContainer = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen>
             </iframe>
+            <div>
+                <div className='my-5 font-bold text-2xl'>Comments</div>
+                <CommentsContainer />
+            </div>
         </div>
     )
 }

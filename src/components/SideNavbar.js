@@ -12,7 +12,7 @@ const SideNavbar = () => {
 
 
     return (
-        <div className='mx-6'>
+        <div className='mx-6 bg-white'>
 
             <ul className='py-3 w-48' >
                 <div className='flex items-center'><AiFillHome />

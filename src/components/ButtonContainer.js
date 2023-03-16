@@ -19,7 +19,7 @@ const list = ["All",
 ]
 const ButtonContainer = () => {
     return (
-        <div className='flex sticky top-16 z-10 bg-white'>
+        <div className='flex sticky top-16 z-0 bg-white'>
 
             {
                 list.map((item, i) => {
