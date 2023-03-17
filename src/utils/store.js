@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"
+import liveSlice from "./liveSlice"
 import navSlice from "./navSlice"
 import searchSlice from "./searchSlice"
 
@@ -7,7 +8,8 @@ import searchSlice from "./searchSlice"
 const store = configureStore({
     reducer: {
         nav: navSlice,
-        search: searchSlice
+        search: searchSlice,
+        chat: liveSlice
 
     }
 })

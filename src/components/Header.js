@@ -16,7 +16,7 @@ const Header = () => {
         dispatch(toggle())
     }
 
-    console.log("LRU", searchQuery);
+    //console.log("LRU", searchQuery);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -33,7 +33,7 @@ const Header = () => {
 
 
     async function getSuggestion() {
-        console.log("API Call " + searchTxt)
+        //console.log("API Call " + searchTxt)
         const response = await fetch(YOUTUBE_SUGGESTIONS + searchTxt)
         const data = await response.json()
         setSuggestionsData(data[1])
